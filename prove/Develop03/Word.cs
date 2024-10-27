@@ -29,6 +29,3 @@ public class Word
     }
 }
 
-//https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/deserialization
-//https://learn.microsoft.com/en-us/dotnet/standard/serialization/
-//https://github.com/bcbooks/scriptures-json
