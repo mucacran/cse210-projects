@@ -1,0 +1,87 @@
+{
+    "books": [
+        {
+            "book": "Genesis",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "reference": "Genesis 1",
+                    "verses": [
+                        {
+                            "reference": "Genesis 1:1",
+                            "text": "In the beginning God created the heaven and the earth.",
+                            "verse": 1
+                        },
+                        {
+                            "reference": "Genesis 1:2",
+                            "text": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+                            "verse": 2
+                        }
+                    ]
+                },
+                {
+                    "chapter": 2,
+                    "reference": "Genesis 2",
+                    "verses": [
+                        {
+                            "reference": "Genesis 2:1",
+                            "text": "Thus the heavens and the earth were finished, and all the host of them.",
+                            "verse": 1
+                        },
+                        {
+                            "reference": "Genesis 2:2",
+                            "text": "And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.",
+                            "verse": 2
+                        }
+                    ]
+                }
+            ],
+            "full_title": "The First Book of Moses Called Genesis",
+            "lds_slug": "gen"
+        },
+        {
+            "book": "Exodo",
+            "chapters": [
+                {
+                    "chapter": 1,
+                    "reference": "Exodo 1",
+                    "verses": [
+                        {
+                            "reference": "Exodo 1:1",
+                            "text": "In the beginning God created the heaven and the earth.",
+                            "verse": 1
+                        },
+                        {
+                            "reference": "Exodo 1:2",
+                            "text": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.",
+                            "verse": 2
+                        }
+                    ]
+                },
+                {
+                    "chapter": 2,
+                    "reference": "Exodo 2",
+                    "verses": [
+                        {
+                            "reference": "Exodo 2:1",
+                            "text": "Thus the heavens and the earth were finished, and all the host of them.",
+                            "verse": 1
+                        },
+                        {
+                            "reference": "Exodo 2:2",
+                            "text": "And on the seventh day God ended his work which he had made; and he rested on the seventh day from all his work which he had made.",
+                            "verse": 2
+                        }
+                    ]
+                }
+            ],
+            "full_title": "The First Book of Moses Called Exodo",
+            "lds_slug": "exo"
+        }
+    ],
+    "last_modified": "2016-10-02",
+    "lds_slug": "ot",
+    "the_end": "The End of the Prophets",
+    "title": "The Old Testament",
+    "version": 1
+}
