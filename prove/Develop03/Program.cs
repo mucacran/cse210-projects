@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Json;
 using System.Text.Json;
 
 class Program
@@ -7,15 +8,40 @@ class Program
     {
 
  // Ruta del archivo JSON
-        string jsonPath = "cor.json";
+        string jsonPath = "old-testament.json";
 
         // Leer el archivo JSON
         string jsonContent = File.ReadAllText(jsonPath);
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
 
-        
+        //desearealizar la deserialización de un objeto JSON a un objeto C#.
+        // Deserializar el archivo JSON
+        Root root = JsonSerializer.Deserialize<Root>(jsonContent);
 
-        
-        Console.WriteLine(jsonContent);
+        foreach (var book in root.books)
+        {
+            Console.WriteLine(book.book);
+ /*         Console.WriteLine(book.full_title);
+            Console.WriteLine(book.lds_slug);
+
+            foreach (var chapter in book.chapters)
+            {
+                Console.WriteLine(chapter.chapter);
+                Console.WriteLine(chapter.reference);
+
+                foreach (var verse in chapter.verses)
+                {
+                    Console.WriteLine(verse.reference);
+                    Console.WriteLine(verse.text);
+                    Console.WriteLine(verse.verse);
+                }
+            }*/
+        }
+
+
 
 
         
