@@ -21,10 +21,22 @@ class Program
         // Deserializar el archivo JSON
         Root root = JsonSerializer.Deserialize<Root>(jsonContent);
 
-        foreach (var book in root.books)
+        // Crear una instancia de Random
+        Random random = new Random();
+
+        // Obtener un índice aleatorio
+        int randomIndex = random.Next(root.books.Count);
+
+        // Obtener el nombre del libro aleatorio
+        string randomBookName = root.books[randomIndex].book;
+
+        // Imprimir el nombre del libro aleatorio
+        Console.WriteLine("Libro aleatorio: " + randomBookName);
+
+        /*foreach (var book in root.books)
         {
             Console.WriteLine(book.book);
- /*         Console.WriteLine(book.full_title);
+        Console.WriteLine(book.full_title);
             Console.WriteLine(book.lds_slug);
 
             foreach (var chapter in book.chapters)
@@ -38,11 +50,15 @@ class Program
                     Console.WriteLine(verse.text);
                     Console.WriteLine(verse.verse);
                 }
-            }*/
-        }
+            }
+        }*/
 
         //elegir de forma aleatoria un nombre de libro book.book
-        //
+        
+
+
+        
+
 
 
         
