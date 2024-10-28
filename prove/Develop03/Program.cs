@@ -1,14 +1,34 @@
 ﻿using System;
+using System.Text.Json;
 
 class Program
 {
     static void Main(string[] args)
     {
-        
-        string filePath = "old-testament.json";
 
-        // Llama al método de carga de nombres desde la clase Book
-        Book.LoadBookNames(filePath);
+        try
+        {
+            // Ruta del archivo JSON
+            string filePath = "old-testament.json";
+
+            //instancia de la clase Root 
+            Root root = new Root();
+            //imprimir en consola los libros que estan dentro del archivo JSON
+            root.AddBooks(filePath);
+            foreach (Book book in root.Books)
+            {
+                Console.WriteLine(book.BookName);
+            }
+
+
+            
+    
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al cargar el archivo: {ex.Message}");
+        }
+
 
 
         // Crear la referencia y escritura
