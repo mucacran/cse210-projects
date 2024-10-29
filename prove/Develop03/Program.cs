@@ -30,13 +30,32 @@ class Program
         // Obtener el nombre del libro aleatorio
         string randomBookName = root.books[randomIndex].book;
 
-        // Imprimir el nombre del libro aleatorio
+        var prueba = root.books[randomIndex].chapters[0].verses[0].text;
+
+        int randomIndexChapter = random.Next(root.books[randomIndex].chapters.Count);
+        int randomIndexVerse = random.Next(root.books[randomIndex].chapters[randomIndexChapter].verses.Count);
+        // "text" del versículo aleatorio
+        string randomVerseText = root.books[randomIndex].chapters[randomIndexChapter].verses[randomIndexVerse].text;
+
+        //numero de capitulos de un libro randomBookName
+        Console.WriteLine("Numero de capitulos: " + root.books[randomIndex].chapters.Count);
+
+        //numero total de versiculos de el capitulo randomIndexChapter de el libro randomBookName
+        Console.WriteLine("Numero de versiculos del capitulo " + randomIndexChapter + " del libro de " + randomBookName + ": " + root.books[randomIndex].chapters[randomIndexChapter].verses.Count);       
+        
+
+        Console.WriteLine("Libro prueb: " + prueba);
+
         Console.WriteLine("Libro aleatorio: " + randomBookName);
+        
+        //imprimir por pantalla los capitulos del libro root.books[randomIndex].book
+
+
 
         /*foreach (var book in root.books)
         {
             Console.WriteLine(book.book);
-        Console.WriteLine(book.full_title);
+            Console.WriteLine(book.full_title);
             Console.WriteLine(book.lds_slug);
 
             foreach (var chapter in book.chapters)
@@ -55,19 +74,9 @@ class Program
 
         //elegir de forma aleatoria un nombre de libro book.book
         
-
-
-        
-
-
-
-        
-
-
-
         // Crear la referencia y escritura
-        Reference reference = new Reference(randomBookName, 3, 16);
-        Scripture scripture = new Scripture(reference, "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.");
+        Reference reference = new Reference(randomBookName, randomIndexChapter+1, randomIndexVerse+1);
+        Scripture scripture = new Scripture(reference, randomVerseText);
 
 
 
@@ -91,7 +100,7 @@ class Program
             {
                 Console.Clear();
                 scripture.Display();
-                Console.WriteLine("All words are hidden. Goodbye!");
+                Console.WriteLine("All words are hidden. Goodbye Sergio!");
                 break;
             }
         }

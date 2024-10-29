@@ -23,7 +23,6 @@ public class Book
     public List<Chapter> chapters { get; set; }
     public string full_title { get; set; }
     public string lds_slug { get; set; }
-    
 }
 
 public class Chapter
