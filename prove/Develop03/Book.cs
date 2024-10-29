@@ -9,12 +9,6 @@ public class Root
     public string the_end { get; set; }
     public string title { get; set; }
     public int version { get; set; }
-
-/*
-    public Root()
-    {
-        books = new List<Book>();
-    }*/
 }
 
 public class Book

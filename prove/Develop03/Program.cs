@@ -37,42 +37,7 @@ class Program
         // "text" del versículo aleatorio
         string randomVerseText = root.books[randomIndex].chapters[randomIndexChapter].verses[randomIndexVerse].text;
 
-        //numero de capitulos de un libro randomBookName
-        Console.WriteLine("Numero de capitulos: " + root.books[randomIndex].chapters.Count);
-
-        //numero total de versiculos de el capitulo randomIndexChapter de el libro randomBookName
-        Console.WriteLine("Numero de versiculos del capitulo " + randomIndexChapter + " del libro de " + randomBookName + ": " + root.books[randomIndex].chapters[randomIndexChapter].verses.Count);       
         
-
-        Console.WriteLine("Libro prueb: " + prueba);
-
-        Console.WriteLine("Libro aleatorio: " + randomBookName);
-        
-        //imprimir por pantalla los capitulos del libro root.books[randomIndex].book
-
-
-
-        /*foreach (var book in root.books)
-        {
-            Console.WriteLine(book.book);
-            Console.WriteLine(book.full_title);
-            Console.WriteLine(book.lds_slug);
-
-            foreach (var chapter in book.chapters)
-            {
-                Console.WriteLine(chapter.chapter);
-                Console.WriteLine(chapter.reference);
-
-                foreach (var verse in chapter.verses)
-                {
-                    Console.WriteLine(verse.reference);
-                    Console.WriteLine(verse.text);
-                    Console.WriteLine(verse.verse);
-                }
-            }
-        }*/
-
-        //elegir de forma aleatoria un nombre de libro book.book
         
         // Crear la referencia y escritura
         Reference reference = new Reference(randomBookName, randomIndexChapter+1, randomIndexVerse+1);
