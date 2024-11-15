@@ -37,11 +37,19 @@ class Program
         // "text" del versículo aleatorio
         string randomVerseText = root.books[randomIndex].chapters[randomIndexChapter].verses[randomIndexVerse].text;
 
+<<<<<<< Updated upstream
         //numero de capitulos de un libro randomBookName
         Console.WriteLine("Numero de capitulos: " + root.books[randomIndex].chapters.Count);
 
         //numero total de versiculos de el capitulo randomIndexChapter de el libro randomBookName
         Console.WriteLine("Numero de versiculos del capitulo " + randomIndexChapter + " del libro de " + randomBookName + ": " + root.books[randomIndex].chapters[randomIndexChapter].verses.Count);       
+=======
+        //llamando a la clase libros
+        Book book = new Book(randomBookName, root.books[randomIndex].full_title);
+        //llamando a la clase capitulo
+        //Chapter chapter = new Chapter(randomIndexChapter, root.books[randomIndex].chapters[randomIndexChapter].reference);
+
+>>>>>>> Stashed changes
         
 
         Console.WriteLine("Libro prueb: " + prueba);

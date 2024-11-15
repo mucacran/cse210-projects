@@ -23,7 +23,15 @@ public class Book
     public List<Chapter> chapters { get; set; }
     public string full_title { get; set; }
     public string lds_slug { get; set; }
-}
+
+    //constructor
+    public Book(string book, int chapter, int verse)
+    {
+        this.book = book;
+        this.chapters = new List<Chapter>();
+        this.full_title = full_title;
+        this.lds_slug = lds_slug;
+    }
 
 public class Chapter
 {
