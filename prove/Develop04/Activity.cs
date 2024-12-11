@@ -35,7 +35,7 @@ abstract class Activity
     {
         Console.WriteLine("\nWell done!!");
         ShowSpinner(3);
-        Console.WriteLine($"You have completed {_duration} seconds of the {GetName()}.");
+        Console.WriteLine($"\nYou have completed {_duration} seconds of the {GetName()}.");
         ShowSpinner(3);
     }
 
@@ -43,8 +43,9 @@ abstract class Activity
     protected void PrepareToBegin()
     {
         Console.Clear();
-        Console.WriteLine("\nGet ready...");
+        Console.WriteLine("Get ready...");
         ShowSpinner(5);
+        Console.Write("\n");
     }
 
     // Spinner para pausas

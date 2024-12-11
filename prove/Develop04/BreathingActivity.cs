@@ -32,7 +32,7 @@ class BreathingActivity : Activity
             {
                 Console.Write("\nNow Breathe out...");
                 ShowCountdown(4); // 4 seg
-                Console.WriteLine("\n");
+                Console.Write("\n");
             }
             breathingIn = !breathingIn;
         }

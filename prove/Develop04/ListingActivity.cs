@@ -31,7 +31,7 @@ class ListingActivity : Activity
         Console.WriteLine("\nList as many responses as you can to the following prompt:");
         Console.WriteLine($"--- {prompt} ---");
 
-        Console.WriteLine("You may begin in:");
+        Console.Write("You may begin in: ");
         ShowCountdown(5);
 
         DateTime endTime = DateTime.Now.AddSeconds(_duration);
@@ -39,13 +39,22 @@ class ListingActivity : Activity
         
         Console.WriteLine("Start listing items (press enter after each item):");
         
+        Console.Write("> ");
         while (DateTime.Now < endTime)
         {
-            Console.Write("> ");
             // Leer items hasta que se acabe el tiempo
             if (Console.KeyAvailable)
             {
+                
+
                 string item = Console.ReadLine();
+
+                // para que no se imprima ">" en la siguiente línea
+                if (DateTime.Now < endTime)
+                {
+                    Console.Write("> ");
+                }
+                
                 if (!string.IsNullOrWhiteSpace(item))
                 {
                     count++;

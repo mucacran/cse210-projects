@@ -43,21 +43,24 @@ class ReflectionActivity : Activity
         string prompt = _prompts[rand.Next(_prompts.Count)];
         
         Console.WriteLine("\nConsider the following prompt:");
-        Console.WriteLine($"--- {prompt} ---");
-        Console.WriteLine("When you have something in mind, press enter to continue.");
+        Console.WriteLine($"\n--- {prompt} ---");
+        Console.WriteLine("\nWhen you have something in mind, press enter to continue.");
         Console.ReadLine();
 
         Console.WriteLine("Now ponder on each of the following questions as they relate to this experience.");
-        Console.WriteLine("You may begin in:");
+        Console.Write("You may begin in: ");
         ShowCountdown(5);
 
         DateTime endTime = DateTime.Now.AddSeconds(_duration);
 
+        Console.Clear();
+
         while (DateTime.Now < endTime)
         {
             string question = _questions[rand.Next(_questions.Count)];
-            Console.WriteLine($"\n> {question}");
+            Console.Write($"\n> {question} ");
             ShowSpinner(5); // Pausa 5 segundos para reflexionar en cada pregunta
         }
+        Console.Write("\n");
     }
 }
