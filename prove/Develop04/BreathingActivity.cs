@@ -30,10 +30,12 @@ class BreathingActivity : Activity
             }
             else
             {
-                Console.Write("\nBreathe out...");
+                Console.Write("\nNow Breathe out...");
                 ShowCountdown(4); // 4 seg
+                Console.WriteLine("\n");
             }
             breathingIn = !breathingIn;
         }
+
     }
 }

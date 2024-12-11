@@ -11,13 +11,12 @@ class Program
         while (running)
         {
             Console.Clear();
-            Console.WriteLine("Mindfulness Program");
-            Console.WriteLine("Select an activity:");
-            Console.WriteLine("1. Breathing Activity");
-            Console.WriteLine("2. Reflection Activity");
-            Console.WriteLine("3. Listing Activity");
-            Console.WriteLine("4. Quit");
-            Console.Write("Enter your choice: ");
+            Console.WriteLine("Menu Options:");
+            Console.WriteLine("  1. Start Breathing Activity");
+            Console.WriteLine("  2. Start Reflection Activity");
+            Console.WriteLine("  3. Start Listing Activity");
+            Console.WriteLine("  4. Quit");
+            Console.Write("Select a choise from the menu: ");
             
             string choice = Console.ReadLine();
             

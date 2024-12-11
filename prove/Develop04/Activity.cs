@@ -20,8 +20,8 @@ abstract class Activity
     protected virtual void ShowStartingMessage()
     {
         Console.Clear();
-        Console.WriteLine($"Welcome to the {GetName()}.");
-        Console.WriteLine(GetDescription());
+        Console.WriteLine($"Welcome to the {GetName()}.\n");
+        Console.WriteLine(GetDescription() + "\n");
         Console.Write("How long, in seconds, would you like for your session? ");
         string input = Console.ReadLine();
         if (!int.TryParse(input, out _duration))
@@ -42,6 +42,7 @@ abstract class Activity
     // Método común para pausar con un mensaje de "Get ready..."
     protected void PrepareToBegin()
     {
+        Console.Clear();
         Console.WriteLine("\nGet ready...");
         ShowSpinner(5);
     }
