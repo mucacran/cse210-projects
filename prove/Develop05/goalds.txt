@@ -1,0 +1,7 @@
+974
+2
+SimpleGoal:Give a talk,Speak in Sacrament metting,100,True
+EternalGoal:XXXXX,XXXXX,34
+SimpleGoal:sdfsdf sdfsdf,sdfsdfsdf,20,True
+ChecklistGoal:attend the temple,attend and perform any ordinance,50,3,500,3
+ChecklistGoal:Wake up early wake up by at least 6:00am,Wake up,10,10,1000,0
