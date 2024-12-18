@@ -1,0 +1,14 @@
+// creacion de un priyecto c#
+dotnet new console
+
+// creacion de carpetas
+mkdir nombredeCarpeta
+
+// Desde la carpeta FormaGeometrica, ejecuta:
+dotnet build
+
+// para ejecutar
+dotnet run
+
+// Para agregar estos archivos, ejecuta:
+touch Forma.cs Rectangulo.cs Circulo.cs
