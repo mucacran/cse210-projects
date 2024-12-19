@@ -11,17 +11,14 @@ abstract class Vehiculo
         set { _nombre = value; }
     }
 
-
     // metodo para imprimir por pantalla el nombre del metodo
-    public void ImprimirNombre()
+    public string ImprimirNombre()
     {
-        System.Console.WriteLine("Nombre: " + _nombre);
+        return _nombre;
     }
-
-    
+   
     abstract public void CalcularImpuesto();
 
     abstract public void MostrarInformacion();
     
 }
-
