@@ -4,8 +4,7 @@ public class Running : Activity
 {
     private double _distance; // Ej: en millas
 
-    public Running(string date, int minutes, double distance)
-        : base(date, minutes)
+    public Running(string date, int minutes, double distance) : base(date, minutes)
     {
         _distance = distance;
     }

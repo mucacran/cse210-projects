@@ -6,7 +6,7 @@ class Registro{
     public Registro(){
         _usuarios = new List<Usuario>();
         CargarRegistro();
-        LimpiarRegistro();
+
     }
 
 // añadir registro
@@ -32,6 +32,8 @@ class Registro{
 
     // guardar en un archivo el registro
     public void GuardarRegistro(){
+
+        LimpiarRegistro();
         
         using (StreamWriter writer = new StreamWriter(path, true))
         {
@@ -63,7 +65,9 @@ class Registro{
 
     //limpia el contenido del archivo de registro
     public void LimpiarRegistro(){
-        File.Delete(path);
+        //File.Delete(path);
+        File.WriteAllText(path, ""); // Escribe contenido vacío
+        Console.WriteLine("El contenido del archivo ha sido eliminado.");
     }
 
 }

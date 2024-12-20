@@ -16,10 +16,11 @@ class Program
             Console.Clear();
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Registrate");
-            Console.WriteLine("  2. Clase de boxeo");
-            Console.WriteLine("  3. Clse de Danza");
-            Console.WriteLine("  4. Clase de Yoga");
-            Console.WriteLine("  5. Quit");
+            Console.WriteLine("  2. Clases de Boxeo");
+            Console.WriteLine("  3. Clases de CrossFit");
+            Console.WriteLine("  4. Clases de Yoga");
+            Console.WriteLine("  5. Clases de Zumba");
+            Console.WriteLine("  6. Quit");
             Console.Write("Select a choise from the menu: ");
             
             string choice = Console.ReadLine();
@@ -39,7 +40,9 @@ class Program
                     Console.ReadLine();
                     break;
                 case "3":
-                    Console.WriteLine($"tu elegistes: {choice}");
+                    Crosfit crosfit = new Crosfit();
+                    crosfit.Clasede();
+                    Console.ReadLine();
 
                     break;
                 case "4":
@@ -47,6 +50,10 @@ class Program
 
                     break;
                 case "5":
+                    Console.WriteLine($"tu elegistes: {choice}");
+
+                    break;
+                case "6":
                     running = false;
                     continue;
                 default:

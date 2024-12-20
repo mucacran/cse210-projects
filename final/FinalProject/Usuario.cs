@@ -4,8 +4,6 @@ class Usuario{
     private string _correo;
     private string _password;
     private string _telefono;
-    //una simple lista de cosas
-    private List<string> _usuarios;
 
     public Usuario(string nombre, string apellido, string correo, string password, string telefono){
         _nombre = nombre;
