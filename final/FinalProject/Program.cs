@@ -12,34 +12,48 @@ class Program
         {
             Console.Clear();
             Console.WriteLine("Menu Options:");
-            Console.WriteLine("  1. Start Breathing Activity");
-            Console.WriteLine("  2. Start Reflection Activity");
-            Console.WriteLine("  3. Start Listing Activity");
-            Console.WriteLine("  4. Start Gratitude Activity");
+            Console.WriteLine("  1. Registrate");
+            Console.WriteLine("  2. Clase de boxeo");
+            Console.WriteLine("  3. Clse de Danza");
+            Console.WriteLine("  4. Clase de Yoga");
             Console.WriteLine("  5. Quit");
             Console.Write("Select a choise from the menu: ");
             
             string choice = Console.ReadLine();
             
             //Activity activity = null;
+            Usuario usuario = new Usuario();
             
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"tu elegistes: {choice}");
-                    //activity = new BreathingActivity();
+                    Console.WriteLine($"Tú elegiste: {choice}");
+                    usuario.Registrar();                    
+                    
                     break;
                 case "2":
                     Console.WriteLine($"tu elegistes: {choice}");
-                    //activity = new ReflectionActivity();
+                    Usuario user1 = usuario.ObtenerPrimerUsuario();
+
+                    if (user1 != null)
+                    {
+                        Console.WriteLine($"Hola usuario: {user1.Nombre}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No hay usuarios registrados en el sistema.");
+                    }
+                    Console.WriteLine($"Usuarios registrados: {usuario.ContarUsuarios()}");
+
+                    Console.ReadLine();
                     break;
                 case "3":
                     Console.WriteLine($"tu elegistes: {choice}");
-                    //activity = new ListingActivity();
+
                     break;
                 case "4":
                     Console.WriteLine($"tu elegistes: {choice}");
-                    //activity = new GratitudeActivity();
+
                     break;
                 case "5":
                     running = false;

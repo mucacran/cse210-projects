@@ -1,0 +1,2 @@
+//crea archivos en windows
+New-Item -Path Usuario.cs -ItemType File
