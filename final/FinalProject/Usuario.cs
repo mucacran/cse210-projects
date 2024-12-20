@@ -4,8 +4,8 @@ class Usuario{
     private string _correo;
     private string _password;
     private string _telefono;
-    // propiedad privada para hacer una lista de ususarios
-    private List<Usuario> _usuarios = new List<Usuario>();
+    //una simple lista de cosas
+    private List<string> _usuarios;
 
     public Usuario(string nombre, string apellido, string correo, string password, string telefono){
         _nombre = nombre;
@@ -21,6 +21,7 @@ class Usuario{
         _correo = "";
         _password = "";
         _telefono = "";
+        _usuarios = new List<string>();
     }
 
     public string Nombre{
@@ -64,14 +65,26 @@ class Usuario{
         Console.Write("Telefono: ");
         Telefono = Console.ReadLine();
 
-        _usuarios.Add(this);
+        Usuario user = new Usuario(Nombre, Apellido, Correo, Password, Telefono);
+
+        //_usuarios.Add(this);
+ 
     }
+
+    public void guardarListaenPropiedad(string _nombre,string _apellido,string _correo,string _password,string _telefono){
+        //Guardar la lista de usuarios en una propiedad
+        string user = $"{_nombre},{_apellido},{_correo},{_password},{_telefono}";
+
+        _usuarios.Add(user);
+    }
+
+
     // Guardar usuarios en un archivo de texto con un nombre clave
     public void GuardarUsuarios(){
         //string path = "usuarios.txt";
     }
 
-    public Usuario ObtenerPrimerUsuario()
+    public string ObtenerPrimerUsuario()
     {
         if (_usuarios.Count > 0) // Verifica si la lista no está vacía
         {

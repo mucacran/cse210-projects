@@ -33,11 +33,11 @@ class Program
                     break;
                 case "2":
                     Console.WriteLine($"tu elegistes: {choice}");
-                    Usuario user1 = usuario.ObtenerPrimerUsuario();
+                    String user1 = usuario.ObtenerPrimerUsuario();
 
                     if (user1 != null)
                     {
-                        Console.WriteLine($"Hola usuario: {user1.Nombre}");
+                        Console.WriteLine($"Hola usuario: {user1}");
                     }
                     else
                     {
