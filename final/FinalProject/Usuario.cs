@@ -21,7 +21,6 @@ class Usuario{
         _correo = "";
         _password = "";
         _telefono = "";
-        _usuarios = new List<string>();
     }
 
     public string Nombre{
@@ -50,9 +49,9 @@ class Usuario{
     }
 
     static  void Bienvenida(){
-        Console.WriteLine("Bienvenido a la plataforma de clases virtuales");
+        Console.WriteLine("Bienvenido a la plataforma de clases virtuales\nAhora puedes registrarte");
     }
-    public void Registrar(){
+    public void Registrar(Registro registro){
         Bienvenida();
         Console.Write("Nombre: ");
         Nombre = Console.ReadLine();
@@ -65,40 +64,9 @@ class Usuario{
         Console.Write("Telefono: ");
         Telefono = Console.ReadLine();
 
-        Usuario user = new Usuario(Nombre, Apellido, Correo, Password, Telefono);
+        registro.AddRegistro(this);
+        Console.WriteLine("Usuario registrado exitosamente");
 
-        //_usuarios.Add(this);
- 
-    }
-
-    public void guardarListaenPropiedad(string _nombre,string _apellido,string _correo,string _password,string _telefono){
-        //Guardar la lista de usuarios en una propiedad
-        string user = $"{_nombre},{_apellido},{_correo},{_password},{_telefono}";
-
-        _usuarios.Add(user);
-    }
-
-
-    // Guardar usuarios en un archivo de texto con un nombre clave
-    public void GuardarUsuarios(){
-        //string path = "usuarios.txt";
-    }
-
-    public string ObtenerPrimerUsuario()
-    {
-        if (_usuarios.Count > 0) // Verifica si la lista no está vacía
-        {
-            return _usuarios[0]; // Devuelve el primer usuario
-        }
-        else
-        {
-            return null; // Si no hay usuarios, devuelve null
-        }
-    }
-
-    public int ContarUsuarios()
-    {
-        return _usuarios.Count;
     }
 
 

@@ -5,7 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        //instanciamos solo una vez registro
+        Registro registro = new Registro();
+
+
         bool running = true;
         
         while (running)
@@ -21,30 +24,18 @@ class Program
             
             string choice = Console.ReadLine();
             
-            //Activity activity = null;
-            Usuario usuario = new Usuario();
-            
             switch (choice)
             {
                 case "1":
                     Console.WriteLine($"Tú elegiste: {choice}");
-                    usuario.Registrar();                    
-                    
+                    Usuario usuario = new Usuario();
+                    usuario.Registrar(registro);                    
+                    registro.GuardarRegistro();
                     break;
                 case "2":
                     Console.WriteLine($"tu elegistes: {choice}");
-                    String user1 = usuario.ObtenerPrimerUsuario();
-
-                    if (user1 != null)
-                    {
-                        Console.WriteLine($"Hola usuario: {user1}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("No hay usuarios registrados en el sistema.");
-                    }
-                    Console.WriteLine($"Usuarios registrados: {usuario.ContarUsuarios()}");
-
+                    registro.MostrarRegistro();
+                    
                     Console.ReadLine();
                     break;
                 case "3":
