@@ -26,7 +26,6 @@ class Clases{
         Console.WriteLine("*********************************************");
         Console.WriteLine("Welcome to : " + GetNombreClass() + " Class");
         Console.WriteLine("*********************************************");
-        Console.ReadLine();
     }
 
     public Clases(string nombreClass){
@@ -43,6 +42,7 @@ class Clases{
         {
             case "1":
                 giveMeData();
+                ifRegistred();
                 Console.ReadLine();
                 break;
             case "2":
@@ -78,15 +78,28 @@ class Clases{
         }
 
         string[] lines = File.ReadAllLines(path);
+        bool usuarioEncontrado = false;
 
+
+        //int count = 0;
         foreach (string line in lines)
         {
             string[] parts = line.Split(',');
-            if (parts[0] == Correo && parts[1] == Password)
+
+            //count++;
+            
+            //if (parts[2] == Correo && parts[3] == Password)
+            if(parts.Length == 5 && parts[2].Trim() == Correo.Trim())
             {
-                Console.WriteLine("You are registered to this class");
+                Console.WriteLine($"Welcome {parts[0]}, you are registered to this class");
+                usuarioEncontrado = true;
                 return;
             }
+        }
+
+        if (!usuarioEncontrado)
+        {
+            Console.WriteLine("No se encontró un usuario con ese correo. Por favor registrese primero");
         }
     }
 
