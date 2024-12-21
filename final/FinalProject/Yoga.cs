@@ -1,10 +1,7 @@
 class Yoga: Clases{
-    public Yoga(string nombre): base(nombre){
-        nombre = "Yoga";
-    }
+    public Yoga() : base("Yoga") { }
 
-    public override void Clasede()
-    {
-        Console.WriteLine($"Clase: {GetNombreClass()}");
+    public Yoga(string nombre) : base(nombre) {
+        nombre = "Yoga";
     }
 }

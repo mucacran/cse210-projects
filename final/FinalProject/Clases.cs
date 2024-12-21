@@ -8,8 +8,10 @@ class Clases{
     public string GetNombreClass(){
         return _nombreClass;
     }
-
-    public virtual void Clasede();
-
+/*
+    public virtual void Clasede(){
+        GetNombreClass();
+    }
+*/
 
 }

@@ -41,13 +41,16 @@ class Program
                     break;
                 case "3":
                     Crosfit crosfit = new Crosfit();
-                    crosfit.Clasede();
+                    //crosfit.Clasede();
+                    Console.WriteLine(crosfit.GetNombreClass());
                     Console.ReadLine();
 
                     break;
                 case "4":
                     Console.WriteLine($"tu elegistes: {choice}");
-
+                    Yoga yoga = new Yoga();
+                    Console.WriteLine(yoga.GetNombreClass());
+                    Console.ReadLine();
                     break;
                 case "5":
                     Console.WriteLine($"tu elegistes: {choice}");
