@@ -42,7 +42,11 @@ class Registro{
                 writer.WriteLine($"{u.Nombre},{u.Apellido},{u.Correo},{u.Password},{u.Telefono}");
             }
         }
-        
+        Console.WriteLine();
+        Console.WriteLine("******************************");
+        Console.WriteLine("User registered successfully\nPress enter to continue...");
+        Console.WriteLine("******************************");
+        Console.ReadLine();
     }
 
 
@@ -67,7 +71,6 @@ class Registro{
     public void LimpiarRegistro(){
         //File.Delete(path);
         File.WriteAllText(path, ""); // Escribe contenido vacío
-        Console.WriteLine("El contenido del archivo ha sido eliminado.");
     }
 
 }

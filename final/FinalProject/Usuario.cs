@@ -47,9 +47,10 @@ class Usuario{
     }
 
     static  void Bienvenida(){
-        Console.WriteLine("Bienvenido a la plataforma de clases virtuales\nAhora puedes registrarte");
+        Console.WriteLine("Please enter your details for registration");
     }
     public void Registrar(Registro registro){
+        Console.Clear();
         Bienvenida();
         Console.Write("Nombre: ");
         Nombre = Console.ReadLine();
@@ -63,7 +64,6 @@ class Usuario{
         Telefono = Console.ReadLine();
 
         registro.AddRegistro(this);
-        Console.WriteLine("Usuario registrado exitosamente");
 
     }
 
