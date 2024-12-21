@@ -1,3 +1,4 @@
 change@mucacran.com,Boxeo
 change@mucacran.com,Zumba
 helenbravo@mucacran.com,Boxeo
+mucacran@mucacran.com,Yoga

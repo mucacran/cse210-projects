@@ -83,7 +83,7 @@ class Clases
         string path = "registro.txt";
         if (!File.Exists(path))
         {
-            Console.WriteLine("El archivo de registro no existe.");
+            Console.WriteLine("The log file does not exist.");
             return;
         }
 
