@@ -24,37 +24,28 @@ class Program
             Console.Write("Select a choise from the menu: ");
             
             string choice = Console.ReadLine();
+
+            Clases registerClass = null;
             
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine($"Tú elegiste: {choice}");
                     Usuario usuario = new Usuario();
                     usuario.Registrar(registro);                    
                     registro.GuardarRegistro();
                     break;
                 case "2":
-                    Console.WriteLine($"tu elegistes: {choice}");
-                    registro.MostrarRegistro();
-                    
-                    Console.ReadLine();
+                    //registro.MostrarRegistro();
+                    registerClass = new Boxeo();
                     break;
                 case "3":
-                    Crosfit crosfit = new Crosfit();
-                    //crosfit.Clasede();
-                    Console.WriteLine(crosfit.GetNombreClass());
-                    Console.ReadLine();
-
+                    registerClass = new Crosfit();
                     break;
                 case "4":
-                    Console.WriteLine($"tu elegistes: {choice}");
-                    Yoga yoga = new Yoga();
-                    Console.WriteLine(yoga.GetNombreClass());
-                    Console.ReadLine();
+                    registerClass = new Yoga();
                     break;
                 case "5":
-                    Console.WriteLine($"tu elegistes: {choice}");
-
+                    registerClass = new Zumba();
                     break;
                 case "6":
                     running = false;
@@ -64,12 +55,12 @@ class Program
                     Console.ReadLine();
                     continue;
             }
-            /*
-            if (activity != null)
+            
+            if (registerClass != null)
             {
-                activity.RunActivity();
+                registerClass.ejectRegister();
             }
-            */
+            
         }
     }
 }
